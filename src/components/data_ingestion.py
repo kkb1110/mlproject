@@ -58,8 +58,8 @@ if __name__=="__main__":
     train_array,test_array,_=data_transformation.initiate_data_transformation(train_data,test_data)
 
     model_trainer=ModelTrainer()
-    score,best_model_name = model_trainer.initiate_model_trainer(train_array,test_array)
-    print(score,best_model_name)
+    score = model_trainer.initiate_model_trainer(train_array,test_array)
+    print(score)
     
 
     
