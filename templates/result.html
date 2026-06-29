@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Prediction Result</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family:
+          Inter,
+          Segoe UI,
+          sans-serif;
+      }
+
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background: #f8fafc;
+      }
+
+      .card {
+        background: white;
+
+        padding: 50px;
+
+        width: 450px;
+
+        text-align: center;
+
+        border-radius: 18px;
+
+        border: 1px solid #e5e7eb;
+
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+
+        animation: appear 0.5s ease;
+      }
+
+      h1 {
+        font-size: 28px;
+        color: #111827;
+        margin-bottom: 15px;
+      }
+
+      .score {
+        font-size: 72px;
+
+        font-weight: 700;
+
+        color: #2563eb;
+
+        margin: 25px 0;
+      }
+
+      p {
+        color: #6b7280;
+
+        margin-bottom: 35px;
+      }
+
+      .btn {
+        display: inline-block;
+
+        padding: 14px 28px;
+
+        background: #111827;
+
+        color: white;
+
+        text-decoration: none;
+
+        border-radius: 12px;
+
+        transition: 0.25s;
+
+        font-weight: 600;
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+
+        background: #1f2937;
+      }
+
+      @keyframes appear {
+        from {
+          opacity: 0;
+          transform: translateY(25px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="card">
+      <h1>Prediction Complete</h1>
+
+      <p>The predicted Mathematics score is</p>
+
+      <div class="score">{{ result }}</div>
+
+      <a href="{{ url_for('predict_datapoint') }}" class="btn">
+        Predict Again
+      </a>
+    </div>
+  </body>
+</html>
